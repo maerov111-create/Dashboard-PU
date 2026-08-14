@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Панель управления — Академия Стратег</title>
+<style>
+  body { background: #0a0f1e; color: #e2e8f0; font-family: 'Segoe UI', sans-serif;
+         display: flex; align-items: center; justify-content: center; min-height: 100vh; margin: 0; }
+  .box { text-align: center; }
+  .logo { width: 200px; margin-bottom: 24px; }
+  h1 { font-size: 22px; color: #f1f5f9; margin-bottom: 8px; }
+  p { color: #64748b; font-size: 14px; margin-bottom: 24px; }
+  .btn { background: #3b82f6; color: white; padding: 12px 28px; border-radius: 8px;
+         text-decoration: none; font-weight: 600; font-size: 15px; }
+  .spinner { width: 32px; height: 32px; border: 3px solid #1e3a5f;
+             border-top-color: #3b82f6; border-radius: 50%; animation: spin 0.8s linear infinite;
+             margin: 0 auto 16px; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+</style>
+<script>
+  // URL дашборда обновляется автоматически при каждом перезапуске туннеля
+  const DASHBOARD_URL = "TUNNEL_URL_PLACEHOLDER";
+  if (DASHBOARD_URL && DASHBOARD_URL !== "TUNNEL_URL_PLACEHOLDER") {
+    window.location.replace(DASHBOARD_URL);
+  }
+</script>
+</head>
+<body>
+<div class="box">
+  <img class="logo" src="https://raw.githubusercontent.com/maerov111-create/Dashboard-PU/main/logo_gh.png" alt="Академия Стратег" onerror="this.style.display='none'">
+  <div class="spinner"></div>
+  <h1>Панель управления</h1>
+  <p id="msg">Подключаемся к дашборду...</p>
+  <a class="btn" href="TUNNEL_URL_PLACEHOLDER" id="link">Открыть дашборд</a>
+</div>
+</body>
+</html>
